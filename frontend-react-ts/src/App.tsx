@@ -7,11 +7,15 @@ import AppRoutes from './routes';
 //import Link from react router
 import { Link } from "react-router";
 
+
+// import customized style
+import './App.css';
+
 const App: FC = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
         <div className="container">
           <Link to="/" className="navbar-brand">HOME</Link>
           <button

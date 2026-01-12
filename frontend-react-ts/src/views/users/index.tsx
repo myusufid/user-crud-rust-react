@@ -77,7 +77,7 @@ export default function UserIndex() {
                     <div className="card border-0 rounded shadow-sm">
                         <div className="card-body">
                             <table className="table table-bordered">
-                                <thead className="bg-dark text-white">
+                                <thead>
                                     <tr>
                                         <th scope="col">FULL NAME</th>
                                         <th scope="col">EMAIL ADDRESS</th>

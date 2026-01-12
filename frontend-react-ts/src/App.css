@@ -1,42 +1,93 @@
+/* Global root container adjustments */
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+}
+
+/* Logo animation */
+@keyframes logo-float {
+  0% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 5px 15px rgba(99, 102, 241, 0.4));
+  }
+
+  50% {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 25px 15px rgba(99, 102, 241, 0.2));
+  }
+
+  100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 5px 15px rgba(99, 102, 241, 0.4));
+  }
 }
 
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transition: all 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Utility for section titles */
+.section-title {
+  font-size: 2.5rem;
+  background: var(--gradient-text, linear-gradient(135deg, #6366f1 0%, #ec4899 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Custom Alert Styling */
+.alert {
+  border: none;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
 }
 
-.card {
-  padding: 2em;
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
-.read-the-docs {
-  color: #888;
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: var(--gradient-text, linear-gradient(135deg, #6366f1 0%, #ec4899 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.05em;
+}
+
+.nav-link {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
 }
